@@ -1,0 +1,6 @@
+framework module Pods_Tambayan2 {
+  umbrella header "Pods-Tambayan2-umbrella.h"
+
+  export *
+  module * { export * }
+}

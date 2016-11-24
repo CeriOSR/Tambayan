@@ -7,21 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97DD5F8290C3326A6CA59D8D /* Pods_Tambayan2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879B501BBEB350E83D63A0F8 /* Pods_Tambayan2.framework */; };
+		E0229E3A1DDEA34A00DD232B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0229E391DDEA34A00DD232B /* FBSDKCoreKit.framework */; };
+		E0229E3E1DDEA37E00DD232B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0229E3B1DDEA37E00DD232B /* FBSDKLoginKit.framework */; };
+		E0229E3F1DDEA37E00DD232B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0229E3C1DDEA37E00DD232B /* FBSDKShareKit.framework */; };
+		E0229E401DDEA37E00DD232B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0229E3D1DDEA37E00DD232B /* Bolts.framework */; };
+		E03B354E1DD92DAA001308A2 /* Machado.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E03B354D1DD92DAA001308A2 /* Machado.jpg */; };
+		E0B863AA1DD8EB3800EBDD86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B863A91DD8EB3800EBDD86 /* Main.storyboard */; };
+		E0B863AF1DD8ECB300EBDD86 /* AddEventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B863AB1DD8ECB300EBDD86 /* AddEventsController.swift */; };
+		E0B863B01DD8ECB300EBDD86 /* EventDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B863AC1DD8ECB300EBDD86 /* EventDetailsController.swift */; };
+		E0B863B11DD8ECB300EBDD86 /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B863AD1DD8ECB300EBDD86 /* EventsTableViewController.swift */; };
+		E0B863B21DD8ECB300EBDD86 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B863AE1DD8ECB300EBDD86 /* LoginController.swift */; };
+		E0B863B41DD8ED9F00EBDD86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0B863B31DD8ED9F00EBDD86 /* GoogleService-Info.plist */; };
 		E0CD60311DD8E4BC00C16883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CD60301DD8E4BC00C16883 /* AppDelegate.swift */; };
 		E0CD60331DD8E4BC00C16883 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CD60321DD8E4BC00C16883 /* ViewController.swift */; };
-		E0CD60361DD8E4BC00C16883 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0CD60341DD8E4BC00C16883 /* Main.storyboard */; };
 		E0CD60381DD8E4BC00C16883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CD60371DD8E4BC00C16883 /* Assets.xcassets */; };
 		E0CD603B1DD8E4BD00C16883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0CD60391DD8E4BD00C16883 /* LaunchScreen.storyboard */; };
+		E0E2723A1DDA331F0049437E /* EventsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E272391DDA331F0049437E /* EventsViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		348E49BC3E50F45DA29EB05D /* Pods-Tambayan2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tambayan2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tambayan2/Pods-Tambayan2.debug.xcconfig"; sourceTree = "<group>"; };
+		879B501BBEB350E83D63A0F8 /* Pods_Tambayan2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tambayan2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE95D11C1E062D254D17086 /* Pods-Tambayan2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tambayan2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tambayan2/Pods-Tambayan2.release.xcconfig"; sourceTree = "<group>"; };
+		E0229E391DDEA34A00DD232B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		E0229E3B1DDEA37E00DD232B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		E0229E3C1DDEA37E00DD232B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		E0229E3D1DDEA37E00DD232B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E03B354D1DD92DAA001308A2 /* Machado.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Machado.jpg; sourceTree = "<group>"; };
+		E0B863A91DD8EB3800EBDD86 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E0B863AB1DD8ECB300EBDD86 /* AddEventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventsController.swift; sourceTree = "<group>"; };
+		E0B863AC1DD8ECB300EBDD86 /* EventDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsController.swift; sourceTree = "<group>"; };
+		E0B863AD1DD8ECB300EBDD86 /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		E0B863AE1DD8ECB300EBDD86 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		E0B863B31DD8ED9F00EBDD86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E0CD602D1DD8E4BC00C16883 /* Tambayan2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tambayan2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CD60301DD8E4BC00C16883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0CD60321DD8E4BC00C16883 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E0CD60351DD8E4BC00C16883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0CD60371DD8E4BC00C16883 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0CD603A1DD8E4BD00C16883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0CD603C1DD8E4BD00C16883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0CD60421DD8E58D00C16883 /* Tambayan2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tambayan2.entitlements; sourceTree = "<group>"; };
+		E0E272391DDA331F0049437E /* EventsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +56,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0229E401DDEA37E00DD232B /* Bolts.framework in Frameworks */,
+				E0229E3F1DDEA37E00DD232B /* FBSDKShareKit.framework in Frameworks */,
+				97DD5F8290C3326A6CA59D8D /* Pods_Tambayan2.framework in Frameworks */,
+				E0229E3A1DDEA34A00DD232B /* FBSDKCoreKit.framework in Frameworks */,
+				E0229E3E1DDEA37E00DD232B /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		089F683D40A12E290E805DA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				348E49BC3E50F45DA29EB05D /* Pods-Tambayan2.debug.xcconfig */,
+				9FE95D11C1E062D254D17086 /* Pods-Tambayan2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AD7BB30B163252450389E3CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0229E3B1DDEA37E00DD232B /* FBSDKLoginKit.framework */,
+				E0229E3C1DDEA37E00DD232B /* FBSDKShareKit.framework */,
+				E0229E3D1DDEA37E00DD232B /* Bolts.framework */,
+				E0229E391DDEA34A00DD232B /* FBSDKCoreKit.framework */,
+				879B501BBEB350E83D63A0F8 /* Pods_Tambayan2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0229E301DDEA05D00DD232B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0B863AC1DD8ECB300EBDD86 /* EventDetailsController.swift */,
+				E0B863AB1DD8ECB300EBDD86 /* AddEventsController.swift */,
+				E0B863AD1DD8ECB300EBDD86 /* EventsTableViewController.swift */,
+				E0B863AE1DD8ECB300EBDD86 /* LoginController.swift */,
+				E0E272391DDA331F0049437E /* EventsViewCell.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		E0CD60241DD8E4BC00C16883 = {
 			isa = PBXGroup;
 			children = (
 				E0CD602F1DD8E4BC00C16883 /* Tambayan2 */,
 				E0CD602E1DD8E4BC00C16883 /* Products */,
+				089F683D40A12E290E805DA1 /* Pods */,
+				AD7BB30B163252450389E3CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +121,16 @@
 		E0CD602F1DD8E4BC00C16883 /* Tambayan2 */ = {
 			isa = PBXGroup;
 			children = (
+				E0229E301DDEA05D00DD232B /* Controllers */,
+				E0CD60421DD8E58D00C16883 /* Tambayan2.entitlements */,
 				E0CD60301DD8E4BC00C16883 /* AppDelegate.swift */,
 				E0CD60321DD8E4BC00C16883 /* ViewController.swift */,
-				E0CD60341DD8E4BC00C16883 /* Main.storyboard */,
+				E0B863A91DD8EB3800EBDD86 /* Main.storyboard */,
 				E0CD60371DD8E4BC00C16883 /* Assets.xcassets */,
+				E03B354D1DD92DAA001308A2 /* Machado.jpg */,
 				E0CD60391DD8E4BD00C16883 /* LaunchScreen.storyboard */,
 				E0CD603C1DD8E4BD00C16883 /* Info.plist */,
+				E0B863B31DD8ED9F00EBDD86 /* GoogleService-Info.plist */,
 			);
 			path = Tambayan2;
 			sourceTree = "<group>";
@@ -71,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0CD603F1DD8E4BD00C16883 /* Build configuration list for PBXNativeTarget "Tambayan2" */;
 			buildPhases = (
+				D2ECC69E0FCB4EBFF3313B0C /* [CP] Check Pods Manifest.lock */,
 				E0CD60291DD8E4BC00C16883 /* Sources */,
 				E0CD602A1DD8E4BC00C16883 /* Frameworks */,
 				E0CD602B1DD8E4BC00C16883 /* Resources */,
+				CA736A6DF36AE2FAB498E753 /* [CP] Embed Pods Frameworks */,
+				D099E033F96E1E43C558456F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +170,13 @@
 				TargetAttributes = {
 					E0CD602C1DD8E4BC00C16883 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = AS82F53XC3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,12 +204,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0CD603B1DD8E4BD00C16883 /* LaunchScreen.storyboard in Resources */,
+				E03B354E1DD92DAA001308A2 /* Machado.jpg in Resources */,
 				E0CD60381DD8E4BC00C16883 /* Assets.xcassets in Resources */,
-				E0CD60361DD8E4BC00C16883 /* Main.storyboard in Resources */,
+				E0B863AA1DD8EB3800EBDD86 /* Main.storyboard in Resources */,
+				E0B863B41DD8ED9F00EBDD86 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA736A6DF36AE2FAB498E753 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tambayan2/Pods-Tambayan2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D099E033F96E1E43C558456F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tambayan2/Pods-Tambayan2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2ECC69E0FCB4EBFF3313B0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E0CD60291DD8E4BC00C16883 /* Sources */ = {
@@ -137,21 +267,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0CD60331DD8E4BC00C16883 /* ViewController.swift in Sources */,
+				E0B863B21DD8ECB300EBDD86 /* LoginController.swift in Sources */,
+				E0E2723A1DDA331F0049437E /* EventsViewCell.swift in Sources */,
 				E0CD60311DD8E4BC00C16883 /* AppDelegate.swift in Sources */,
+				E0B863AF1DD8ECB300EBDD86 /* AddEventsController.swift in Sources */,
+				E0B863B11DD8ECB300EBDD86 /* EventsTableViewController.swift in Sources */,
+				E0B863B01DD8ECB300EBDD86 /* EventDetailsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E0CD60341DD8E4BC00C16883 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E0CD60351DD8E4BC00C16883 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E0CD60391DD8E4BD00C16883 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -181,6 +308,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -203,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -231,6 +359,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -247,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -258,9 +387,18 @@
 		};
 		E0CD60401DD8E4BD00C16883 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 348E49BC3E50F45DA29EB05D /* Pods-Tambayan2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tambayan2/Tambayan2.entitlements;
+				DEVELOPMENT_TEAM = AS82F53XC3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceBookFrameworks",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Tambayan2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CeriOS.Tambayan2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,9 +408,18 @@
 		};
 		E0CD60411DD8E4BD00C16883 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FE95D11C1E062D254D17086 /* Pods-Tambayan2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tambayan2/Tambayan2.entitlements;
+				DEVELOPMENT_TEAM = AS82F53XC3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FaceBookFrameworks",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Tambayan2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CeriOS.Tambayan2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +446,7 @@
 				E0CD60411DD8E4BD00C16883 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
