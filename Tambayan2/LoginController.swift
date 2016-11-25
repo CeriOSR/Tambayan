@@ -64,7 +64,7 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
         
         if (FBSDKAccessToken.current() != nil) {
             
-            performSegue(withIdentifier: "showEventsTableViewController", sender: self)
+            performSegue(withIdentifier: "loginToEventTypeSegue", sender: self)
             
         } else {
             
@@ -163,7 +163,7 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
                                     } else {
                                         
                                         //successfully logged in user go to EventsTableViewController
-                                        self.performSegue(withIdentifier: "showEventsTableViewController", sender: self)
+                                        self.performSegue(withIdentifier: "loginToEventTypeSegue", sender: self)
                                         print("USER LOGGED IN!!!!")
                                         
                                     }
@@ -240,7 +240,7 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
             }
             
             //successfully logged in user go to EventsTableViewController
-            self.performSegue(withIdentifier: "showEventsTableViewController", sender: self)
+            self.performSegue(withIdentifier: "loginToEventTypeSegue", sender: self)
             print("USER LOGGED IN!!!!")
             
         })
@@ -292,7 +292,7 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
                 
             }
             //if no error then perform segue into EventsTableViewController
-            self.performSegue(withIdentifier: "showEventsTableViewController", sender: self)
+            self.performSegue(withIdentifier: "loginToEventTypeSegue", sender: self)
             
         }
         

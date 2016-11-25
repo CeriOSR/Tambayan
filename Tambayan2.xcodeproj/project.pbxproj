@@ -13,6 +13,7 @@
 		E0229E3F1DDEA37E00DD232B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0229E3C1DDEA37E00DD232B /* FBSDKShareKit.framework */; };
 		E0229E401DDEA37E00DD232B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0229E3D1DDEA37E00DD232B /* Bolts.framework */; };
 		E03B354E1DD92DAA001308A2 /* Machado.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E03B354D1DD92DAA001308A2 /* Machado.jpg */; };
+		E054C4DE1DE7D1310033979A /* EventTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E054C4DD1DE7D1310033979A /* EventTypeViewController.swift */; };
 		E0B863AA1DD8EB3800EBDD86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B863A91DD8EB3800EBDD86 /* Main.storyboard */; };
 		E0B863AF1DD8ECB300EBDD86 /* AddEventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B863AB1DD8ECB300EBDD86 /* AddEventsController.swift */; };
 		E0B863B01DD8ECB300EBDD86 /* EventDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B863AC1DD8ECB300EBDD86 /* EventDetailsController.swift */; };
@@ -35,6 +36,7 @@
 		E0229E3C1DDEA37E00DD232B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		E0229E3D1DDEA37E00DD232B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		E03B354D1DD92DAA001308A2 /* Machado.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Machado.jpg; sourceTree = "<group>"; };
+		E054C4DD1DE7D1310033979A /* EventTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeViewController.swift; sourceTree = "<group>"; };
 		E0B863A91DD8EB3800EBDD86 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E0B863AB1DD8ECB300EBDD86 /* AddEventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventsController.swift; sourceTree = "<group>"; };
 		E0B863AC1DD8ECB300EBDD86 /* EventDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				E0B863AD1DD8ECB300EBDD86 /* EventsTableViewController.swift */,
 				E0B863AE1DD8ECB300EBDD86 /* LoginController.swift */,
 				E0E272391DDA331F0049437E /* EventsViewCell.swift */,
+				E054C4DD1DE7D1310033979A /* EventTypeViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				E0CD60331DD8E4BC00C16883 /* ViewController.swift in Sources */,
 				E0B863B21DD8ECB300EBDD86 /* LoginController.swift in Sources */,
 				E0E2723A1DDA331F0049437E /* EventsViewCell.swift in Sources */,
+				E054C4DE1DE7D1310033979A /* EventTypeViewController.swift in Sources */,
 				E0CD60311DD8E4BC00C16883 /* AppDelegate.swift in Sources */,
 				E0B863AF1DD8ECB300EBDD86 /* AddEventsController.swift in Sources */,
 				E0B863B11DD8ECB300EBDD86 /* EventsTableViewController.swift in Sources */,

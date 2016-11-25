@@ -16,6 +16,7 @@ var detailDate: String?
 var detailImage: String?
 var detailLocation: String?
 var detailPrice: String?
+var detailType: String?
 var detailDescription: String?
 
 var detailEvents = [Events]() //used in detailEvents
@@ -74,8 +75,19 @@ class EventsTableViewController: UITableViewController {
     }
     //fetching the events from FireBase
     func fetchEvents() {
+        //var that holds the type chosen from EventTypeView
+        let type = eventTypeFetch as String
+        
         //reference to the firebase database
-        FIRDatabase.database().reference(fromURL: "https://tambayan-ios-rey.firebaseio.com/").child("events").observe(.childAdded, with: { (snapshot) in
+        let fetchRef = FIRDatabase.database().reference(fromURL: "https://tambayan-ios-rey.firebaseio.com/")
+        
+        
+        
+        
+        
+        fetchRef.child("events").queryOrdered(byChild: "type").queryEqual(toValue: type).observe(.childAdded, with: { (snapshot) in
+        
+        //fetchRef.child("events").observe(.childAdded, with: { (snapshot) in
             
             //seeing if snapshot is empty, if not...putting the data into a dictionary
             if let dictionary = snapshot.value as? [String: AnyObject] {
@@ -88,10 +100,13 @@ class EventsTableViewController: UITableViewController {
                 events.location = dictionary["location"] as? String
                 events.price = dictionary["price"] as? String
                 events.eventDescription = dictionary["description"] as? String
+                events.type = dictionary["type"] as? String
                 
-                uniVarEvents.append(events)
-                //image will be set immediately
+                //if events.type == type {
                 
+                    uniVarEvents.append(events)
+                    //image will be set immediately
+                //}
                 DispatchQueue.main.async(execute: {
                     
                     detailEvents = uniVarEvents
@@ -194,6 +209,7 @@ class Events: NSObject {
     var image: String?
     var location: String?
     var price: String?
+    var type: String?
     var eventDescription: String?
     
 }

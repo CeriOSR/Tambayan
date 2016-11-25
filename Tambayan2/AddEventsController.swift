@@ -30,7 +30,7 @@ class AddEventsController: UIViewController, UIImagePickerControllerDelegate, UI
     
     @IBOutlet weak var eventTypePicker: UIPickerView!
     //for the UIPickerView
-    var eventTypeArray = ["Outdoor Activities", "Concerts", "Educational", "Technology"]
+    var eventTypeArray = ["Outdoors", "Concerts", "Education", "Technology"]
     
     var type = ""
     
@@ -150,10 +150,9 @@ class AddEventsController: UIViewController, UIImagePickerControllerDelegate, UI
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit", style: .plain, target: self, action: #selector(self.submitEventImage))
         //adding a Tap gesture recognizer on the image to select an image from Photo library
         eventImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleSelectEventImage)))
+        //initial value of PickerView
+        type = eventTypeArray[0]
         
-        
-        
-        //eventTypePicker.reloadAllComponents()
     }
     //declaring and launching the photo library image picker with an editor
     func handleSelectEventImage () {
