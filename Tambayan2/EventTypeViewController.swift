@@ -38,6 +38,8 @@ class EventTypeViewController: UIViewController, UICollectionViewDelegate, UICol
     
     override func viewDidAppear(_ animated: Bool) {
         
+        navigationController?.isNavigationBarHidden = false
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.plain, target: self, action: #selector(handleLogout))
         
         eventType.append(eventTypeObjects(title: "Technology", image: #imageLiteral(resourceName: "tech")))
