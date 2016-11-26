@@ -47,7 +47,7 @@ class EventsTableViewController: UITableViewController {
         loginManager.logOut()
         
         //segueing out to loginController
-        performSegue(withIdentifier: "logoutSegue", sender: self)
+        performSegue(withIdentifier: "noUserSegue", sender: self)
         
     }
 

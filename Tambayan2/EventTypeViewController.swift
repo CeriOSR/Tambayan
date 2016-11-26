@@ -29,24 +29,29 @@ class EventTypeViewController: UIViewController, UICollectionViewDelegate, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.plain, target: self, action: #selector(handleLogout))
-        
-        eventType.append(eventTypeObjects(title: "Technology", image: #imageLiteral(resourceName: "tech")))
-        
-        eventType.append(eventTypeObjects(title: "Outdoors", image: #imageLiteral(resourceName: "outdoors")))
-
-        eventType.append(eventTypeObjects(title: "Concerts", image: #imageLiteral(resourceName: "concerts")))
-
-        eventType.append(eventTypeObjects(title: "Education", image: #imageLiteral(resourceName: "education")))
-
-        collectionView.delegate = self
-        
-        collectionView.dataSource = self
         
         //collectionView.reloadData()
     
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.plain, target: self, action: #selector(handleLogout))
+        
+        eventType.append(eventTypeObjects(title: "Technology", image: #imageLiteral(resourceName: "tech")))
+        
+        eventType.append(eventTypeObjects(title: "Outdoors", image: #imageLiteral(resourceName: "outdoors")))
+        
+        eventType.append(eventTypeObjects(title: "Music", image: #imageLiteral(resourceName: "concerts")))
+        
+        eventType.append(eventTypeObjects(title: "Education", image: #imageLiteral(resourceName: "education")))
+        
+        collectionView.delegate = self
+        
+        collectionView.dataSource = self
+
     }
     
     //checking for users

@@ -30,7 +30,7 @@ class AddEventsController: UIViewController, UIImagePickerControllerDelegate, UI
     
     @IBOutlet weak var eventTypePicker: UIPickerView!
     //for the UIPickerView
-    var eventTypeArray = ["Outdoors", "Concerts", "Education", "Technology"]
+    var eventTypeArray = ["Outdoors", "Music", "Education", "Technology"]
     
     var type = ""
     

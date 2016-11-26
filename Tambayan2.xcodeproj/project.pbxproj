@@ -21,7 +21,6 @@
 		E0B863B21DD8ECB300EBDD86 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B863AE1DD8ECB300EBDD86 /* LoginController.swift */; };
 		E0B863B41DD8ED9F00EBDD86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0B863B31DD8ED9F00EBDD86 /* GoogleService-Info.plist */; };
 		E0CD60311DD8E4BC00C16883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CD60301DD8E4BC00C16883 /* AppDelegate.swift */; };
-		E0CD60331DD8E4BC00C16883 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CD60321DD8E4BC00C16883 /* ViewController.swift */; };
 		E0CD60381DD8E4BC00C16883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CD60371DD8E4BC00C16883 /* Assets.xcassets */; };
 		E0CD603B1DD8E4BD00C16883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0CD60391DD8E4BD00C16883 /* LaunchScreen.storyboard */; };
 		E0E2723A1DDA331F0049437E /* EventsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E272391DDA331F0049437E /* EventsViewCell.swift */; };
@@ -45,7 +44,6 @@
 		E0B863B31DD8ED9F00EBDD86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E0CD602D1DD8E4BC00C16883 /* Tambayan2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tambayan2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CD60301DD8E4BC00C16883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0CD60321DD8E4BC00C16883 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E0CD60371DD8E4BC00C16883 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0CD603A1DD8E4BD00C16883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0CD603C1DD8E4BD00C16883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 				E0229E301DDEA05D00DD232B /* Controllers */,
 				E0CD60421DD8E58D00C16883 /* Tambayan2.entitlements */,
 				E0CD60301DD8E4BC00C16883 /* AppDelegate.swift */,
-				E0CD60321DD8E4BC00C16883 /* ViewController.swift */,
 				E0B863A91DD8EB3800EBDD86 /* Main.storyboard */,
 				E0CD60371DD8E4BC00C16883 /* Assets.xcassets */,
 				E03B354D1DD92DAA001308A2 /* Machado.jpg */,
@@ -269,7 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0CD60331DD8E4BC00C16883 /* ViewController.swift in Sources */,
 				E0B863B21DD8ECB300EBDD86 /* LoginController.swift in Sources */,
 				E0E2723A1DDA331F0049437E /* EventsViewCell.swift in Sources */,
 				E054C4DE1DE7D1310033979A /* EventTypeViewController.swift in Sources */,

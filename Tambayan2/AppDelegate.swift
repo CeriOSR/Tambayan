@@ -9,6 +9,7 @@
 import UIKit
 import Firebase   //import Firebase
 import FBSDKLoginKit   //import Facebook SDK login kit
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,10 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //configure Firebase
         FIRApp.configure()
-        
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        return true
+                
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     //needed by FBlogin. Tells the FBSDK what will happen when we launch another app...which is this current app.
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {

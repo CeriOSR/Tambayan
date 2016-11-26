@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import EventKit
 import EventKitUI
+import Social
+import FBSDKShareKit
 
 class EventDetailsController: UIViewController {
     
@@ -33,6 +35,13 @@ class EventDetailsController: UIViewController {
         addEventToCalendar()
         
     }
+    
+    @IBAction func facebookShareButton(_ sender: Any) {
+        
+        handleFBShare()
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +69,25 @@ class EventDetailsController: UIViewController {
         
         
     }
+    //Facebook Sharing, need to import Social to get this to work
+    func handleFBShare() {
+        //if facebook app is installed in the device
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
+            //fbShare of type the default sharing composer of iOS and its target is facebook
+            let fbShare: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            //prefilling the composer with an image
+            fbShare.add(eventImageView.image)
+            //present the composer
+            self.present(fbShare, animated: true, completion: nil)
+            
+        } else {
+            
+            createAlert(title: "Account", message: "Please login to FaceBook.")
+            
+        }
+        
+    }
+    
     //creating an event function for the calendar with parameters Title, startDate and endDate must Import EventKit
     func createEvent(eventStore: EKEventStore, title: String, startDate: Date, endDate: Date){
         //creating an event of type EKEvent from eventStore

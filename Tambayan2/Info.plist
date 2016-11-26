@@ -52,12 +52,12 @@
         <dict>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>fb1784584135112960</string>
+                <string>fb1856216061279263</string>
             </array>
         </dict>
     </array>
     <key>FacebookAppID</key>
-    <string>1784584135112960</string>
+    <string>1856216061279263</string>
     <key>FacebookDisplayName</key>
     <string>Tambayan</string>
     <key>LSApplicationQueriesSchemes</key>

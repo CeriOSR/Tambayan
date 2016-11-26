@@ -97,100 +97,6 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
         
     }
     
-    //2 methods needed by FBloginbutton
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        
-        if error != nil {
-            
-            createAlert(title: "Unable To Login", message: "Please try again!")
-            
-        } else if result.isCancelled {
-            
-            print("User Cancelled Login")
-            
-        } else {
-            
-            if result.grantedPermissions.contains("email") {
-                //facebook graph contains all the data about the user
-                if let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name"]){
-                    //start the graph request
-                    graphRequest.start(completionHandler: { (connection, result, error) in
-                        
-                        
-                        if error != nil {
-                            
-                            print(error ?? "Graph Request Failed!")
-                            
-                        } else {
-                            
-                            if let userDetails = result as? [String: String] {
-                                
-                                let fbEmail = userDetails["email"]!
-                                let fbName = userDetails["name"]!
-                                let fbId = userDetails["id"]!
-                                
-                                FIRAuth.auth()?.signIn(withEmail: fbEmail, password: "password", completion: { (user, error) in
-                                    
-                                    if let error = error as? NSError {
-                                        
-                                        if error.code == 17011 {
-                                            
-                                            //creating a user in the Firebase Auth
-                                            FIRAuth.auth()?.createUser(withEmail: fbEmail, password: "password", completion: { (user, error) in
-                                                
-                                                if error != nil {
-                                                    
-                                                    self.createAlert(title: "Unable to Register", message: "Invalid email or password.")
-                                                    
-                                                }
-                                                
-                                                //successfully authenticated user
-                                                let values = ["name": fbName, "email": fbEmail, "password": "password"]
-                                                //writing the user into the database with their user ID
-                                                self.registerUserIntoDatabaseWithUID(uid: fbId, values: values as [String : AnyObject])
-                                                print("USER REGISTERED!!!!")
-                                                
-                                            })
-                                            
-                                            
-                                        } else {
-                                            
-                                            self.createAlert(title: "Unable to Login", message: String(describing: error))
-                                            return
-                                            
-                                        }
-                                        
-                                    } else {
-                                        
-                                        //successfully logged in user go to EventsTableViewController
-                                        self.performSegue(withIdentifier: "loginToEventTypeSegue", sender: self)
-                                        print("USER LOGGED IN!!!!")
-                                        
-                                    }
-                                    
-                                })
-                                
-                                
-                            }
-                            
-                        }
-                        
-                    })
-                    
-                }
-                
-            }
-            
-        }
-        
-    }
-    //facebook log out
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        
-        print("Logged OUT!!!")
-        
-    }
-    
     //alert Popup
     func createAlert(title: String, message: String) {
         
@@ -297,8 +203,144 @@ class LoginController: UIViewController, FBSDKLoginButtonDelegate {
         }
         
     }
-
+    
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        
+        if error != nil {
+            print (error!.localizedDescription)
+            return
+        }
+        
+        let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+        
+        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+            
+            if error != nil {
+                
+                print(error!.localizedDescription)
+                return
+                
+            }
+            self.performSegue(withIdentifier: "loginToEventTypeSegue", sender: self)
+            print("User Logged In With Facebook!!!")
+            
+        })
+        
+    }
+    
+    func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
+        
+        return true
+        
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        try! FIRAuth.auth()!.signOut()
+        print("User Logged Out Of Facebook!!!")
+        
+    }
 
 
 }
+
+
+/*   ****MANUAL FACEBOOK LOG IN****
+ 
+ 
+//2 methods needed by FBloginbutton
+func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+    
+    if error != nil {
+        
+        createAlert(title: "Unable To Login", message: "Please try again!")
+        
+    } else if result.isCancelled {
+        
+        print("User Cancelled Login")
+        
+    } else {
+        
+        if result.grantedPermissions.contains("email") {
+            //facebook graph contains all the data about the user
+            if let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, name"]){
+                //start the graph request
+                graphRequest.start(completionHandler: { (connection, result, error) in
+                    
+                    
+                    if error != nil {
+                        
+                        print(error ?? "Graph Request Failed!")
+                        
+                    } else {
+                        
+                        if let userDetails = result as? [String: String] {
+                            
+                            let fbEmail = userDetails["email"]!
+                            let fbName = userDetails["name"]!
+                            let fbId = userDetails["id"]!
+                            
+                            FIRAuth.auth()?.signIn(withEmail: fbEmail, password: "password", completion: { (user, error) in
+                                
+                                if let error = error as? NSError {
+                                    
+                                    if error.code == 17011 {
+                                        
+                                        //creating a user in the Firebase Auth
+                                        FIRAuth.auth()?.createUser(withEmail: fbEmail, password: "password", completion: { (user, error) in
+                                            
+                                            if error != nil {
+                                                
+                                                self.createAlert(title: "Unable to Register", message: "Invalid email or password.")
+                                                
+                                            }
+                                            
+                                            //successfully authenticated user
+                                            let values = ["name": fbName, "email": fbEmail, "password": "password"]
+                                            //writing the user into the database with their user ID
+                                            self.registerUserIntoDatabaseWithUID(uid: fbId, values: values as [String : AnyObject])
+                                            print("USER REGISTERED!!!!")
+                                            
+                                        })
+                                        
+                                        
+                                    } else {
+                                        
+                                        self.createAlert(title: "Unable to Login", message: String(describing: error))
+                                        return
+                                        
+                                    }
+                                    
+                                } else {
+                                    
+                                    //successfully logged in user go to EventsTableViewController
+                                    self.performSegue(withIdentifier: "loginToEventTypeSegue", sender: self)
+                                    print("USER LOGGED IN!!!!")
+                                    
+                                }
+                                
+                            })
+                            
+                            
+                        }
+                        
+                    }
+                    
+                })
+                
+            }
+            
+        }
+        
+    }
+    
+}
+//facebook log out
+func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+    
+    print("Logged OUT!!!")
+    
+}
+*/
+
 
