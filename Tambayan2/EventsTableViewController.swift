@@ -81,14 +81,8 @@ class EventsTableViewController: UITableViewController {
         //reference to the firebase database
         let fetchRef = FIRDatabase.database().reference(fromURL: "https://tambayan-ios-rey.firebaseio.com/")
         
-        
-        
-        
-        
         fetchRef.child("events").queryOrdered(byChild: "type").queryEqual(toValue: type).observe(.childAdded, with: { (snapshot) in
         
-        //fetchRef.child("events").observe(.childAdded, with: { (snapshot) in
-            
             //seeing if snapshot is empty, if not...putting the data into a dictionary
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 
