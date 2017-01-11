@@ -15,6 +15,8 @@ import FBSDKShareKit
 
 class EventDetailsController: UIViewController {
     
+    var event: Events?
+    
     //create a calendar
     var calendar: EKCalendar!
     
@@ -49,24 +51,23 @@ class EventDetailsController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Calendar", style: .plain, target: self, action: #selector(addEventToCalendar))
         locationLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openMap)))
         
-        titleLabel.text = detailTitle
+        titleLabel.text = event?.title
         
-        descriptionTextView.text = detailDescription
+        descriptionTextView.text = event?.description
         
-        dateLabel.text = detailDate
+        dateLabel.text = event?.date
         
-        priceLabel.text = detailPrice
+        priceLabel.text = event?.price
         
-        locationLabel.text = detailLocation
+        locationLabel.text = event?.location
         
         
         //loading an image into the imageView
-        if let cellImage = detailImage! as String?{
+        if let cellImage = event?.image {//detailImage! as String?{
             //fetching image via cache func for the imageView
             eventImageView.loadEventImageUsingCacheWithUrlString(urlString: cellImage)
          
         }
-        
         
     }
     //Facebook Sharing, need to import Social to get this to work
@@ -93,7 +94,7 @@ class EventDetailsController: UIViewController {
         //creating an event of type EKEvent from eventStore
         let event = EKEvent(eventStore: eventStore)
         
-        event.title = detailTitle!
+        event.title = event.title //detailTitle!
         event.startDate = startDate
         event.endDate = endDate
         event.calendar = eventStore.defaultCalendarForNewEvents
@@ -111,7 +112,7 @@ class EventDetailsController: UIViewController {
         
         //create an eventstore
         //detailDate is in Unix Timestamp
-        let calendarDate = detailDate
+        let calendarDate = event?.date //detailDate
         //creating a dateFormatter to convert the unix into ISO
         let dateformatter = DateFormatter()
         //the format we want the result to be for posting to calendar...IT HAS TO BE EXACTLY THE SAME AS THE CONVERTED UNIX ELSE IT WILL CRASH
@@ -136,16 +137,20 @@ class EventDetailsController: UIViewController {
                     self.createAlert(title: "Event Cannot Be Saved!", message: "Please try again!")
                     
                 } else {
+                    
+                    guard let eventTitle = self.event?.title else {return}
                     //if auth granted calling the createEvent which adds event into calendar
-                    self.createEvent(eventStore: eventStore, title: detailTitle!, startDate: startDate!, endDate: endDate!)
+                    self.createEvent(eventStore: eventStore, title: eventTitle /*detailTitle!*/, startDate: startDate!, endDate: endDate!)
                     
                 }
                 
             })
             
         } else {
+            
+            guard let eventTitle = self.event?.title else {return}
             //if already authorized then call the createEvent which adds event into calendar
-            self.createEvent(eventStore: eventStore, title: detailTitle!, startDate: startDate!, endDate: endDate!)
+            self.createEvent(eventStore: eventStore, title: eventTitle /*detailTitle!*/, startDate: startDate!, endDate: endDate!)
 
             
         }
@@ -171,7 +176,7 @@ class EventDetailsController: UIViewController {
     func openMap() {
         
         let baseUrl : String = "http://maps.google.com/?q="
-        let name = detailLocation
+        let name = event?.location //detailLocation
         //replacing % to all unallowed characters like spaces
         let encodedName = name?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let finalUrl = baseUrl + encodedName!

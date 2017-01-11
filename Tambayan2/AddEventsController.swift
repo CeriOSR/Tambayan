@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import Firebase   //import Firebase
-
-
+import Firebase
 
 class AddEventsController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     

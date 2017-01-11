@@ -10,19 +10,21 @@ import UIKit
 import Firebase
 import FBSDKLoginKit
 
-//global vars for the EventDetailsController
-var detailTitle: String?
-var detailDate: String?
-var detailImage: String?
-var detailLocation: String?
-var detailPrice: String?
-var detailType: String?
-var detailDescription: String?
+////global vars for the EventDetailsController
+//var detailTitle: String?
+//var detailDate: String?
+//var detailImage: String?
+//var detailLocation: String?
+//var detailPrice: String?
+//var detailType: String?
+//var detailDescription: String?
 
 var detailEvents = [Events]() //used in detailEvents
 var uniVarEvents = [Events]()
 
 class EventsTableViewController: UITableViewController {
+    
+    var events: Events?
     
     @IBAction func logout(_ sender: AnyObject) {
         
@@ -151,7 +153,7 @@ class EventsTableViewController: UITableViewController {
             let dateCell = DateFormatter.localizedString(from: celldate as Date, dateStyle: DateFormatter.Style.full, timeStyle: DateFormatter.Style.medium)
             
             //assinging the converted date to a global var for use in EventDetailsController
-            detailDate = dateCell
+            events?.date = dateCell
             cell.subtitleLabel.text = dateCell
         }
         
@@ -172,15 +174,16 @@ class EventsTableViewController: UITableViewController {
     }
     //saving the details of the event into global vars for use EventDetailsController
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let rowEvents = detailEvents[indexPath.row]//self.events[indexPath.row]
         
-        detailTitle = rowEvents.title
+        let rowEvents = detailEvents[indexPath.row] //self.events[indexPath.row]
+        
+        events?.title = rowEvents.title
         //detailDate = rowEvents.date
-        detailDescription = rowEvents.eventDescription
-        detailLocation = rowEvents.location
-        detailPrice = rowEvents.price
-        detailImage = rowEvents.image
-
+        events?.eventDescription = rowEvents.eventDescription
+        events?.location = rowEvents.location
+        events?.price = rowEvents.price
+        events?.image = rowEvents.image
+        
         
     }
     
